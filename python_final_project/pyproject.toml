@@ -1,0 +1,6 @@
+[project]
+name = "python-final-project"
+version = "0.1.0"
+description = "Python final project for library book management"
+requires-python = ">=3.13"
+dependencies = []
