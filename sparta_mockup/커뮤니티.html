@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+        <title>학습 질문 | 스파르타클럽 커뮤니티 연습</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body id="page">
+        <header id="site-header">
+            <p id="header-top">
+                <img src="./images/sparta-logo.svg" alt="스파르타클럽" width="132" height="20">
+                <span class="flex-spacer"></span>
+                <span id="utility-menu"><a href="https://hanghae99.spartaclub.kr/" target="_blank" rel="noopener noreferrer">항해</a>  <a href="https://b2b.spartaclub.kr/" target="_blank" rel="noopener noreferrer">기업교육</a>
+                <a href="https://spartaclub.kr/blog" target="_blank" rel="noopener noreferrer">블로그</a>
+                |
+                <a href="https://support.spartaclub.kr/" target="_blank" rel="noopener noreferrer">고객센터</a></span>
+            </p>
+        </header>
+
+        <nav id="site-nav">
+            <p id="main-menu">
+                <a class="main-menu-item" href="https://spartaclub.kr/catalog/scc" target="_blank" rel="noopener noreferrer">전체 강의</a> <a class="main-menu-item" href="https://nbcamp.spartaclub.kr/" target="_blank" rel="noopener noreferrer">취업 캠프 <img src="./images/ic_chevron_down.svg" alt="" class="menu-chevron"></a>
+                <a class="main-menu-item" href="https://scb.spartaclub.kr/" target="_blank" rel="noopener noreferrer">재직자 캠프</a> <a href="#questions" id="community-link">커뮤니티</a>
+                <a class="main-menu-item" href="https://spartaclub.kr/successreview" target="_blank" rel="noopener noreferrer">수강후기</a> <a class="main-menu-item" href="https://spartaclub.kr/event" target="_blank" rel="noopener noreferrer">이벤트</a>
+                <span class="flex-spacer"></span>
+                <button type="button" disabled id="login-button">로그인</button>
+            </p>
+        </nav>
+
+        <div id="community-layout">
+            <nav id="sidebar">
+                <p id="sidebar-selected" class="sidebar-item"><a href="#questions" id="sidebar-question-link">학습 질문</a></p>
+                <p class="sidebar-item">개발 일지</p>
+                <p class="sidebar-item">나의 활동</p>
+                <span class="flex-spacer"></span>
+                <button type="button" disabled id="ask-button">질문하기</button>
+            </nav>
+
+            <main id="questions">
+                <h1 id="page-title">학습 질문 <span id="help-icon"><img src="./images/ic_question.svg" alt="도움말"></span></h1>
+                <p id="page-description">강의 내용이 이해 되지 않거나, 실습 중 막히는 부분이 있다면?<br>
+                    지금 튜터에게 질문해 보세요!</p>
+
+                <div class="search-area">
+                    <p id="search-box">
+                        <label for="search" id="search-icon">⌕</label>
+                        <input id="search" type="text" placeholder="ERROR: ServiceError - Failed to launch environment.라는 에러 메시지가 떠요.">
+                    </p>
+                    <p><button type="button" disabled class="filter-button">강의 <span id="course-filter-value">전체</span> ﹀</button> <button type="button" disabled id="chapter-filter" class="filter-button">챕터 전체 ﹀</button></p>
+                    <div id="sort-options">
+                        <span id="sort-latest"><span id="latest-dot">•</span> 최신순</span>
+                        <span id="sort-recommended"><span id="recommended-dot">•</span> 추천순</span>
+                    </div>
+                </div>
+
+                <section aria-label="질문 목록">
+                    <article class="question-card">
+                        <h3 class="question-title">챗 지피티 창을 어떻게 생성하나요?</h3>
+                        <p class="question-course">클릭으로 완성하는 AI 영상/이미지 제작 실습 클래스 〉 챕터 1</p>
+                        <div class="question-meta">
+                            <p class="meta-text"><img src="./images/16.webp" alt="프로필" class="profile-image"> 홍*경 · 1시간 전</p>
+                            <span class="flex-spacer"></span>
+                            <p class="meta-text">댓글 0 · 추천 0 · 조회수 0</p>
+                        </div>
+                        <p class="question-status"><span class="flex-spacer"></span><span class="status-badge status-waiting">답변 대기중</span></p>
+                    </article>
+                    <article class="question-card">
+                        <h3 class="question-title">강의를 소유할 수 있다고 하셨는데 방법을 알려주세요. 수강 기간이 끝나도 다시 보고 복습할 수 있나요? 방법알려주세요</h3>
+                        <p class="question-course">클릭으로 완성하는 AI 영상/이미지 제작 실습 클래스 〉 챕터 4</p>
+                        <div class="question-meta">
+                            <p class="meta-text"><img src="./images/16.webp" alt="프로필" class="profile-image"> 장*심 · 10시간 전</p>
+                            <span class="flex-spacer"></span>
+                            <p class="meta-text">댓글 0 · 추천 0 · 조회수 0</p>
+                        </div>
+                        <p class="question-status"><span class="flex-spacer"></span><span class="status-badge status-waiting">답변 대기중</span></p>
+                    </article>
+                    <article class="question-card">
+                        <h3 class="question-title">과제 제출시 이미지와 프롬프트 파일을 각자 한장씩 올리려고 하니 과제는 한개의 파일만 업로드 할수 있고 제가 지금 몰 이해 못하고 있는걸까요...ㅠㅠ 이렇게 올려도 될까요..한장으로 편집해서....</h3>
+                        <p class="question-course">클릭으로 완성하는 AI 영상/이미지 제작 실습 클래스 〉 챕터 2</p>
+                        <div class="question-meta">
+                            <p class="meta-text"><img src="./images/16.webp" alt="프로필" class="profile-image"> 홍*진 · 21시간 전</p>
+                            <span class="flex-spacer"></span>
+                            <p class="meta-text">댓글 1 · 추천 1 · 조회수 8</p>
+                        </div>
+                        <p class="question-status"><span class="flex-spacer"></span><span class="status-badge status-answered">답변 완료</span></p>
+                    </article>
+                </section>
+            </main>
+        </div>
+
+        <img id="chat-widget" src="./images/img_chtalk_pc.png" alt="문의하기" width="128" height="60">
+    </body>
+</html>
