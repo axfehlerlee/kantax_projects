@@ -10,6 +10,7 @@ KANT AX 트랙에서 진행한 학습 과제와 프로젝트를 폴더별로 정
 | [`final_assignment`](./final_assignment/) | 당뇨병 데이터를 사용한 머신러닝 최종 과제 | Jupyter에서 노트북 실행 |
 | [`shopingmall_backend`](./shopingmall_backend/) | Supabase 기반 회원·상품·주문 CRUD와 RLS 정책 | 환경변수 설정 후 Jupyter에서 노트북 실행 |
 | [`sparta_mockup`](./sparta_mockup/) | HTML·CSS로 구현한 스파르타 커뮤니티 정적 목업 | `커뮤니티.html`을 브라우저 또는 Live Server로 실행 |
+| [`todolist`](./todolist/) | HTML·CSS·JavaScript Todo 앱: 등록·조회·수정·삭제, localStorage 저장 | `index.html`을 브라우저 또는 Live Server로 실행 |
 
 ## Python 도서 관리 시스템
 
@@ -77,6 +78,21 @@ Supabase 실제 연결과 전체 CRUD 실행 검증은 아직 필요합니다.
 JavaScript 동작이나 서버 기능이 없는 정적 목업입니다. `커뮤니티.html`을 직접 열거나
 VS Code Live Server로 실행할 수 있습니다. Pretendard 글꼴은 외부 CDN을 사용하므로
 동일한 글꼴 표시에는 인터넷 연결이 필요합니다.
+
+## Todo — 내 업보들
+
+경로: [`todolist`](./todolist/)
+
+- `index.html`: 입력 폼과 Backlog / In Progress / Done 보드
+- `css/style.css`: 화면 스타일
+- `js/todo.js`: 할 일 등록·검색·제목 수정·삭제 및 localStorage 저장
+
+`todolist/index.html`을 브라우저 또는 Live Server로 실행합니다. Tailwind CSS Play CDN을
+사용하므로 화면 스타일을 불러오려면 인터넷 연결이 필요합니다. 새 할 일은 Backlog에
+등록되며, 현재 상태 이동 메뉴나 드래그 기능은 없습니다. 저장된 상태에 따라 세 칸에
+표시합니다. 발표용 상태 이동 구상 시연은 현재 앱의 구현 기능과 구분합니다.
+
+실행 방법과 저장 방식은 [`todolist/README.md`](./todolist/README.md)를 확인하세요.
 
 ## 공개 저장소 주의사항
 
