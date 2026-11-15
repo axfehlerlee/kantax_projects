@@ -1,101 +1,130 @@
 # KANT AX Projects
 
-KANT AX 트랙에서 진행한 학습 과제와 프로젝트를 폴더별로 정리한 저장소입니다.
+KANT AX 트랙에서 학습한 Python, 프론트엔드, 백엔드, 데이터 분석 및 AI 개발 과제를 정리한 저장소입니다.
+
+단순한 기능 구현을 넘어 **설계 → 구현 → 검증 → 개선** 과정을 기록합니다.
+
+## Tech Stack
+
+### Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge)
+
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
+
+### Backend & Database
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+
+### Data & AI
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
+### Tools & Infrastructure
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![uv](https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge&logo=uv&logoColor=white)
 
 ## 프로젝트 목록
 
-| 폴더 | 주요 내용 | 실행 방법 |
-| --- | --- | --- |
-| [`python_final_project`](./python_final_project/) | Python 클래스와 모듈을 활용한 도서 관리 시스템 | Python 3.13 이상에서 `python3 main.py` |
-| [`final_assignment`](./final_assignment/) | 당뇨병 데이터를 사용한 머신러닝 최종 과제 | Jupyter에서 노트북 실행 |
-| [`shopingmall_backend`](./shopingmall_backend/) | Supabase 기반 회원·상품·주문 CRUD와 RLS 정책 | 환경변수 설정 후 Jupyter에서 노트북 실행 |
-| [`sparta_mockup`](./sparta_mockup/) | HTML·CSS로 구현한 스파르타 커뮤니티 정적 목업 | `커뮤니티.html`을 브라우저 또는 Live Server로 실행 |
-| [`todolist`](./todolist/) | HTML·CSS·JavaScript Todo 앱: 등록·조회·수정·삭제, localStorage 저장 | `index.html`을 브라우저 또는 Live Server로 실행 |
+| 프로젝트 | 기술 스택 | 주요 구현 |
+|---|---|---|
+| [Board API Assignment](./board_api_assignment/) | FastAPI, Python, PostgreSQL, SQLAlchemy, JWT, Jinja2 | DDD 기반 게시판 API 및 웹 UI |
+| [React / Next Application](./react_next_application/) | React, Next.js, TypeScript | 프론트엔드 응용 과제 |
+| [TypeScript Advanced](./typescript_advanced/) | TypeScript | 타입스크립트 심화 학습 |
+| [Shopping Mall Backend](./shopingmall_backend/) | Python, Supabase, SQL | 회원·상품·주문 CRUD 및 RLS |
+| [Todo List](./todolist/) | HTML, CSS, JavaScript | 할 일 관리 및 localStorage |
+| [Sparta Community Mockup](./sparta_mockup/) | HTML, CSS | 커뮤니티 정적 웹페이지 |
+| [Python Final Project](./python_final_project/) | Python | 객체지향 도서 관리 시스템 |
+| [Machine Learning Assignment](./final_assignment/) | Python, Jupyter | 당뇨병 데이터 분석 및 머신러닝 |
 
-## Python 도서 관리 시스템
+---
 
-경로: [`python_final_project`](./python_final_project/)
+## 주요 프로젝트 — FastAPI Board API
 
-- `main.py`: 메뉴 기반 프로그램 실행 진입점
-- `library_system/base_book.py`: 공통 도서 클래스
-- `library_system/specialized_books.py`: 도서 유형별 클래스
-- `utils/help.py`: 입력과 실행 보조 기능
-- `pyproject.toml`, `uv.lock`: Python 버전과 프로젝트 환경 정보
+**DDD 4계층 아키텍처를 적용한 게시판 백엔드와 Jinja2 웹 UI**
 
-```bash
-cd python_final_project
-python3 main.py
-```
+### 기술 구성
 
-도서 등록·조회·검색·대여·반납·종료 흐름을 점검한 프로젝트입니다.
+- **Backend:** FastAPI, Python
+- **Database:** PostgreSQL, SQLAlchemy
+- **Authentication:** JWT
+- **Frontend:** Jinja2, HTML, CSS, JavaScript
+- **Design:** AsyncTicket 프로젝트의 CSS 디자인 재사용
+- **Architecture:** Domain / Application / Infrastructure / Presentation
 
-## 머신러닝 최종 과제
+### 주요 기능
 
-경로: [`final_assignment`](./final_assignment/)
+- 회원가입 및 로그인·로그아웃
+- JWT 기반 인증과 역할별 접근 제어
+- 게시판 생성 및 조회
+- 회원·비회원 게시글 CRUD
+- 게시글 댓글 CRUD
+- 관리자·회원·비회원 권한 분리
+- 예외 처리 및 입력값 검증
 
-- `머신러닝_최종과제_AX_jungeun.ipynb`: 분석과 모델 학습 노트북
-- `diabetes.csv`: 노트북에서 사용하는 데이터
+### Jinja2 웹 UI
 
-노트북과 CSV 파일을 같은 폴더에 둔 상태에서 Jupyter로 실행합니다.
-현재 원본 노트북의 기대 CSV 체크섬과 동봉된 CSV의 체크섬이 달라,
-해당 검증 셀에서 실행이 중단될 수 있습니다. 과제 데이터 확인이 필요하며
-전체 노트북 실행 완료 상태는 확인되지 않았습니다.
+AsyncTicket 프로젝트의 디자인 요소를 재사용하여 게시판을 브라우저에서 확인할 수 있도록 구성했습니다.
 
-## Shopping Mall Backend
+- 게시판 목록
+- 게시글 목록
+- 게시글 상세 및 댓글 조회
+- 게시글 검색 및 빈 결과 화면
+- 모바일 반응형 레이아웃
 
-경로: [`shopingmall_backend`](./shopingmall_backend/)
+**구현 상태:** 로컬 환경에서 조회 UI와 실제 PostgreSQL 데이터 연결을 검증했습니다. 로그인·글쓰기·수정·삭제 웹 UI는 후속 구현 범위입니다.
 
-- `users.ipynb`: 회원 정보 CRUD
-- `products.ipynb`: 상품 CRUD
-- `orders.ipynb`: 주문 CRUD
-- `policy.sql`: 주문 테이블의 Supabase RLS 정책
-- `supabase_client.py`: 공통 Supabase 클라이언트 생성
-- `supabase-schema-5조백앤드.png`: 테이블 관계도
-- `.env.example`: 로컬 환경변수 예시
+**저장소 상태:** 현재 GitHub의 `board_api_assignment` 폴더에는 초기 README만 등록되어 있으며, 로컬의 최신 소스 코드는 아직 반영되지 않았습니다.
 
-```bash
-cd shopingmall_backend
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-```
+---
 
-`.env`에는 Supabase Project URL과 publishable key를 입력해야 합니다.
-실제 `.env`, 로그인 정보, secret 및 `service_role` 키는 저장소에 포함하지 않습니다.
-Supabase 실제 연결과 전체 CRUD 실행 검증은 아직 필요합니다.
+## 개발 과정에서 중요하게 다룬 내용
 
-자세한 설정은 [`shopingmall_backend/README.md`](./shopingmall_backend/README.md)를 확인하세요.
+### 1. 아키텍처 설계
 
-## Sparta Community Mockup
+DDD 계층별 책임을 분리하고, 의존성 주입을 통해 API 요청과 비즈니스 로직을 연결했습니다.
 
-경로: [`sparta_mockup`](./sparta_mockup/)
+### 2. 데이터베이스 무결성
 
-- `커뮤니티.html`: 커뮤니티 화면의 정적 HTML
-- `style.css`: 레이아웃과 화면 스타일
-- `images/`: 로고, 아이콘, 예시 이미지
+ORM 모델과 실제 PostgreSQL 스키마를 비교하고, 기존 데이터를 보존하면서 오류를 점검했습니다.
 
-JavaScript 동작이나 서버 기능이 없는 정적 목업입니다. `커뮤니티.html`을 직접 열거나
-VS Code Live Server로 실행할 수 있습니다. Pretendard 글꼴은 외부 CDN을 사용하므로
-동일한 글꼴 표시에는 인터넷 연결이 필요합니다.
+### 3. 인증과 보안
 
-## Todo — 내 업보들
+JWT 비밀키를 환경변수로 관리하고, 회원·비회원의 권한과 비밀번호 검증을 분리했습니다.
 
-경로: [`todolist`](./todolist/)
+### 4. 테스트와 검증
 
-- `index.html`: 입력 폼과 Backlog / In Progress / Done 보드
-- `css/style.css`: 화면 스타일
-- `js/todo.js`: 할 일 등록·검색·제목 수정·삭제 및 localStorage 저장
+Swagger 기반 API 테스트, 오류·권한 검증, 회귀 테스트 및 Jinja2 화면 확인을 진행했습니다. 로컬에서 확인한 결과와 새 환경에서 아직 검증하지 않은 항목은 구분합니다.
 
-`todolist/index.html`을 브라우저 또는 Live Server로 실행합니다. Tailwind CSS Play CDN을
-사용하므로 화면 스타일을 불러오려면 인터넷 연결이 필요합니다. 새 할 일은 Backlog에
-등록되며, 현재 상태 이동 메뉴나 드래그 기능은 없습니다. 저장된 상태에 따라 세 칸에
-표시합니다. 발표용 상태 이동 구상 시연은 현재 앱의 구현 기능과 구분합니다.
+---
 
-실행 방법과 저장 방식은 [`todolist/README.md`](./todolist/README.md)를 확인하세요.
+## 개발 및 제출 원칙
 
-## 공개 저장소 주의사항
+- API 키, JWT 비밀키, 비밀번호 및 `.env` 파일을 공개하지 않습니다.
+- 기존 프로젝트와 데이터베이스를 임의로 변경하지 않습니다.
+- 구현 완료와 테스트 완료를 구분하여 기록합니다.
+- 팀·튜터 저장소는 허가된 범위에서만 사용합니다.
+- GitHub에는 실행에 필요한 소스와 문서를 중심으로 정리합니다.
 
-- API 키, 비밀번호, 개인 데이터와 `.env` 파일을 커밋하지 않습니다.
-- Jupyter Notebook을 공유하기 전에 개인정보가 포함된 실행 결과를 제거합니다.
-- 정적 목업의 화면 확인과 백엔드의 실제 연결·CRUD 검증은 별도로 수행합니다.
+---
+
+**KANT AX Track | Learning by Building**
+
+기술을 학습하고 실제 프로젝트에 적용하면서, 설계와 검증 과정을 함께 기록합니다.
