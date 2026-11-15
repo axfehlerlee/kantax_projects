@@ -304,3 +304,23 @@ html {
     bottom: var(--spacing-24);
     z-index: 20;
 }
+
+#site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 5%;
+    border-top: 1px solid #e2e5e9;
+    color: #444a55;
+    background: #f7f8fa;
+}
+
+#site-footer p {
+    margin: 0;
+}
+
+#site-footer a {
+    color: inherit;
+    text-decoration: underline;
+}

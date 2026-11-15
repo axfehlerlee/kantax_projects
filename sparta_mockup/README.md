@@ -25,3 +25,4 @@
 - [전체 화면](./screenshots/full.png)
 - [헤더](./screenshots/header.png)
 - [메인](./screenshots/main.png)
+- [푸터](./screenshots/footer.png)
