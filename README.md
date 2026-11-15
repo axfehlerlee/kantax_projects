@@ -46,7 +46,7 @@ KANT AX 트랙에서 학습한 Python, 프론트엔드, 백엔드, 데이터 분
 | 프로젝트 | 기술 스택 | 주요 구현 |
 |---|---|---|
 | [Board API Assignment](./board_api_assignment/) | FastAPI, Python, PostgreSQL, SQLAlchemy, JWT, Jinja2 | DDD 기반 게시판 API 및 웹 UI |
-| [Next.js Todo](./chapter07-2/) | Next.js, TypeScript, Supabase | 할 일 CRUD, 이메일 인증, 사용자별 RLS |
+| [Next.js Todo](./react_next_application/chapter07-2/) | Next.js, TypeScript, Supabase | 할 일 CRUD, 이메일 인증, 사용자별 RLS |
 | [React / Next Application](./react_next_application/) | React, Next.js, TypeScript | 프론트엔드 응용 과제 |
 | [TypeScript Advanced](./typescript_advanced/) | TypeScript | 타입스크립트 심화 학습 |
 | [Shopping Mall Backend](./shopingmall_backend/) | Python, Supabase, SQL | 회원·상품·주문 CRUD 및 RLS |
