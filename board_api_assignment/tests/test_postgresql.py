@@ -13,22 +13,23 @@ import uuid
 
 ROOT = Path(os.environ.get('BOARD_PROJECT_ROOT', str(Path(__file__).resolve().parents[1])))
 sys.path.insert(0, str(ROOT / 'src'))
-# This process uses an ephemeral signing key, never the application's real key.
-os.environ['JWT_SECRET_KEY'] = secrets.token_hex(64)
-from sqlalchemy import select, text, func
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
-from sqlalchemy.engine import make_url
-from main import app
-from shared.core import database
-from shared.core.models import Base
-from shared.core.exceptions import ForbiddenException
-from user.infrastructure.models import UserModel
-from user.infrastructure.security import BcryptPasswordHasher
-from user.presentation.dependencies import provide_user_service
-from board.infrastructure.sqlalchemy.models import BoardModel, PostModel, CommentModel
-from auth.infrastructure.models import TokenBlacklistModel
-
 TEST_URL = os.environ.get('TEST_DATABASE_URL')
+
+if TEST_URL:
+    # This process uses an ephemeral signing key, never the application's real key.
+    os.environ['JWT_SECRET_KEY'] = secrets.token_hex(64)
+    from sqlalchemy import select, text, func
+    from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+    from sqlalchemy.engine import make_url
+    from main import app
+    from shared.core import database
+    from shared.core.models import Base
+    from shared.core.exceptions import ForbiddenException
+    from user.infrastructure.models import UserModel
+    from user.infrastructure.security import BcryptPasswordHasher
+    from user.presentation.dependencies import provide_user_service
+    from board.infrastructure.sqlalchemy.models import BoardModel, PostModel, CommentModel
+    from auth.infrastructure.models import TokenBlacklistModel
 
 @unittest.skipUnless(TEST_URL, 'Set TEST_DATABASE_URL to an isolated PostgreSQL test database')
 class PostgreSQLTests(unittest.IsolatedAsyncioTestCase):
