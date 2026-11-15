@@ -1,23 +1,11 @@
-# TypeScript 심화 — 문항 2개
+# TypeScript 심화 과제
 
-## 과제 개요
+- [제출용 프로젝트 ZIP](./typescript-assignment.zip)
+- [문항 1 · 데이터 모델링과 집계](./01_data_modeling.ipynb)
+- [문항 2 · 타입 가드와 제네릭 저장소](./02_generics_typeguard.ipynb)
 
-- KANT AX 프론트엔드 심화(TypeScript) 과제
-- 목표: TypeScript 심화 학습 문항 2개 풀이 및 근거 정리
-- 제출 기한: 2026-11-16
-- 상태: 구현 및 제출 여부 미확인
+두 노트북은 각각 독립 실행할 수 있습니다. tslab에서 실행한 코드 셀 7개의 출력을 저장했습니다. ZIP에 노트북과 npm 설정 파일을 담았습니다.
 
-## 진행 체크리스트
+## 재실행
 
-- [ ] TypeScript 문항 1 풀이 및 근거 정리
-- [ ] TypeScript 문항 2 풀이 및 근거 정리
-- [ ] 실행·타입 검사 결과 기록
-- [ ] 코드/답안 제출
-
-## 파일 구성
-
-이 폴더는 과제별 제출 자료를 보관하기 위한 공간입니다. 현재 문항 원문과 답안 파일은 추가되지 않았습니다.
-
-## 검증 기록
-
-문항 원문, 공식 기준, 로컬 실행 결과가 확보되면 이곳에 출처와 결과를 기록합니다.
+ZIP을 풀고 Node.js 환경에서 `npm ci`를 실행합니다. Jupyter가 설치된 환경에서 `npx tslab install --user`로 커널을 등록한 뒤, VS Code Jupyter에서 노트북을 열고 **TypeScript** 커널을 선택합니다.

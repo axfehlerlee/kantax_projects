@@ -19,3 +19,9 @@
 
 상단의 외부 링크는 연결된 사이트를 새 탭에서 엽니다. 검색과 질문 작성은 화면만
 구현했으며, 질문 목록은 HTML에 작성한 예시 데이터입니다.
+
+## 화면 캡처
+
+- [전체 화면](./screenshots/full.png)
+- [헤더](./screenshots/header.png)
+- [메인](./screenshots/main.png)

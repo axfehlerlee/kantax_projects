@@ -66,3 +66,7 @@ supabase.auth.sign_in_with_password(
 - `.env`는 Git에 포함하지 않습니다.
 - RLS를 활성화하고 `anon` 및 `authenticated` 역할의 정책을 확인합니다.
 - 실행 결과에 이메일, 전화번호, 주소가 포함되면 GitHub 공유 전에 지웁니다.
+
+## 테이블 PK·FK
+
+![Supabase 테이블과 PK·FK 관계](./supabase-schema-5조백앤드.png)
