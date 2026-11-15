@@ -7,7 +7,8 @@ Supabase와 Python을 이용한 회원, 상품, 주문 CRUD 과제입니다.
 - `users.ipynb`: 회원 정보 CRUD
 - `products.ipynb`: 상품 CRUD
 - `orders.ipynb`: 주문 CRUD
-- `policy.sql`: 주문 테이블 RLS 정책
+- `supabase_schema.sql`: 테이블·PK/FK 및 RLS 정책
+- `policy.sql`: 초기 주문 정책 실습 자료
 - `supabase_client.py`: 공통 Supabase 클라이언트 생성
 
 ## 실행 준비
@@ -71,12 +72,10 @@ supabase.auth.sign_in_with_password(
 
 ![Supabase 테이블과 PK·FK 관계](./supabase-schema-5조백앤드.png)
 
-## CRUD 동작 캡처
+## 호스팅 Supabase CRUD 동작 캡처
 
-관계도의 PK·FK 구조를 바탕으로 별도 **로컬 PostgreSQL 17** 테스트 스키마에서 회원·상품·주문의 CRUD를 실행했습니다. 회원과 상품을 주문 상세에 연결해 조회하고, 수정 후 주문 금액이 24,000원에서 30,000원으로 바뀌는 것을 확인했습니다. 소프트 삭제 후 활성 회원·상품·주문은 모두 0건이며, 검증 트랜잭션은 롤백했습니다.
+무료 프로젝트 `kant-shopping-db`(도쿄)에 [테이블과 RLS 스키마](./supabase_schema.sql)를 적용했습니다. 구매자와 판매자 테스트 계정으로 로그인한 뒤, Python 노트북에 정의된 함수를 실행해 회원 정보·상품·주문의 생성, 조회, 수정, 소프트 삭제를 확인했습니다. 주문 상세의 FK 연결과 판매자가 구매자의 주문을 읽을 수 없는 것도 확인했습니다.
 
-아래는 실제 `psql` 실행 출력을 캡처한 화면입니다. 호스팅된 Supabase와 Python 노트북의 인증·API 호출은 이 검증 범위에 포함되지 않습니다.
+![호스팅 Supabase에서 Python SDK로 실행한 CRUD 결과](./screenshots/crud-supabase.png)
 
-![PostgreSQL에서 실행한 회원·상품·주문 CRUD 결과](./screenshots/crud-postgresql.png)
-
-[검증 SQL](./crud_verification.sql)은 테스트용 PostgreSQL DB에서 `psql -X -f crud_verification.sql`로 재실행할 수 있습니다.
+초기 [로컬 PostgreSQL 검증](./screenshots/crud-postgresql.png)과 [재실행용 SQL](./crud_verification.sql)도 참고할 수 있습니다.
