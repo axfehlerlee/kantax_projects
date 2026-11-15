@@ -1,5 +1,7 @@
 # Next.js 할 일 앱 · 7-2 / 7-3
 
+**배포** · [할 일 앱 열기](https://kant-supabase-todo.vercel.app/)
+
 Next.js App Router와 Supabase로 만든 개인 할 일 앱입니다. 할 일 추가·조회·완료 상태 변경·삭제, 이메일 회원가입과 로그인·로그아웃을 지원합니다.
 
 ## 로컬 실행

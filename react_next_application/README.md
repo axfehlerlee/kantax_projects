@@ -1,5 +1,7 @@
 # 프론트엔드 응용 — React / Next.js
 
+**배포** · [할 일 앱 열기](https://kant-supabase-todo.vercel.app/)
+
 ## 과제 개요
 
 - KANT AX 프론트엔드 응용 과제
