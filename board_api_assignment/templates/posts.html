@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}게시글 목록{% endblock %}{% block page %}posts{% endblock %}{% block attributes %}data-board-id="{{ board_id }}"{% endblock %}
+{% block content %}
+<div class="board-actions"><a href="/boards">← 게시판 목록</a></div>
+<header class="detail-header"><p class="detail-kicker">COMMUNITY / BOARD</p><h1 id="board-name">게시글</h1><p class="board-info" id="board-meta"></p></header>
+<p id="page-status" class="status" role="status">게시글을 불러오는 중…</p>
+<div id="post-list-panel" hidden><form class="search-form" method="get" role="search"><label>검색 범위<select name="search_type" id="search-type"><option value="ALL">전체</option><option value="TITLE">제목</option><option value="CONTENT">내용</option><option value="TITLE_CONTENT">제목 + 내용</option><option value="AUTHOR_NAME">작성자 이름</option><option value="AUTHOR_EMAIL">작성자 이메일</option></select></label><label>검색어<input name="keyword" id="search-keyword" type="search" maxlength="50" placeholder="찾고 싶은 이야기를 입력하세요"></label><label>페이지 크기<select id="search-size" name="page_size"><option value="">게시판 기본값</option><option value="5">5개</option><option value="10">10개</option><option value="20">20개</option><option value="50">50개</option><option value="100">100개</option></select></label><button class="primary" type="submit">검색 ↗</button></form>
+<div class="catalog-table-wrap"><table class="catalog-table"><caption id="post-count">게시글 목록</caption><thead><tr><th scope="col">번호</th><th scope="col">제목</th><th scope="col">작성자</th><th scope="col" class="post-date">작성일</th></tr></thead><tbody id="post-list"></tbody></table></div>
+<div id="empty-state" class="empty-state" hidden><strong>표시할 게시글이 없습니다.</strong><p>검색 조건을 바꾸거나 나중에 다시 방문해 주세요.</p></div>
+<nav class="pagination" aria-label="게시글 페이지"><a id="previous" hidden>← 이전</a><span id="page-info"></span><a id="next" hidden>다음 →</a></nav></div>
+<div class="post-write-action" id="post-write-action" hidden><a class="primary" href="/boards/{{ board_id|urlencode }}/write">글쓰기 ↗</a></div>
+{% endblock %}

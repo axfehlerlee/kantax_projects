@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}게시판{% endblock %} | KANT BOARD</title>
+<link rel="stylesheet" href="{{ url_for('board_static', path='css/asyncticket.css') }}">
+<link rel="stylesheet" href="{{ url_for('board_static', path='css/board.css') }}">
+<script src="{{ url_for('board_static', path='js/board.js') }}" defer></script>
+<script src="{{ url_for('board_static', path='js/board-actions.js') }}" defer></script>
+</head>
+<body data-page="{% block page %}{% endblock %}" {% block attributes %}{% endblock %}>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<header class="catalog-nav">
+<a class="auth-brand" href="/boards">KANT<span>BOARD</span><sup aria-hidden="true">✳</sup></a>
+<nav aria-label="주 메뉴"><a href="/boards">게시판</a><a data-guest-only href="/signup">회원가입</a><a data-member-only hidden href="/account">계정</a><a data-admin-only hidden href="/manage/boards">게시판 관리</a><a data-admin-only hidden href="/docs">API 문서</a><button id="login-open" type="button">로그인</button><button id="auth-clear" type="button" hidden>로그아웃</button></nav>
+</header>
+<main id="main-content" class="detail-page">{% block content %}{% endblock %}</main>
+<footer><span>KANT BOARD / COMMUNITY</span><span>함께 나누는 이야기</span></footer>
+<dialog id="login-dialog" aria-labelledby="login-heading">
+<button type="button" class="dialog-close" id="login-close">닫기</button>
+<p class="detail-kicker">MEMBER / SIGN IN</p><h2 id="login-heading">로그인</h2>
+<form id="login-form"><label>이메일<input name="email" type="email" autocomplete="username" required></label><label>비밀번호<input name="password" type="password" autocomplete="current-password" required></label><button class="primary" type="submit">로그인 <span aria-hidden="true">↗</span></button></form>
+<p id="login-status" role="status"></p>
+</dialog>
+<dialog id="action-dialog" aria-labelledby="action-heading"><button type="button" class="dialog-close" id="action-close">닫기</button><h2 id="action-heading"></h2><p id="action-description"></p><form id="action-form"><label id="action-content-label">내용<textarea name="content" rows="6"></textarea></label><label id="action-password-label">비회원 비밀번호<input name="guest_password" type="password" autocomplete="off"><small>비회원 작성 시 사용한 비밀번호입니다. 관리자는 생략할 수 있습니다.</small></label><button class="primary" type="submit">확인</button></form><p id="action-status" role="status"></p></dialog>
+</body></html>
