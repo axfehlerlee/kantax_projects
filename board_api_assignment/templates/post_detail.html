@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}게시글 상세{% endblock %}{% block page %}detail{% endblock %}{% block attributes %}data-post-id="{{ post_id }}"{% endblock %}
+{% block content %}
+<div class="board-actions"><a id="back-to-board" href="/boards">← 게시판 목록</a></div>
+<p id="page-status" class="status" role="status">게시글을 불러오는 중…</p>
+<article id="post-article" hidden><header class="detail-header"><p class="detail-kicker" id="post-board"></p><h1 class="post-heading" id="post-title"></h1><p class="board-info" id="post-meta"></p></header><div class="action-row" id="post-actions" hidden><a id="post-edit" href="#">수정</a><button id="post-delete" type="button">삭제</button></div><p>수정·삭제는 작성자 또는 관리자에게 허용됩니다. 비회원 글은 작성 비밀번호가 필요합니다.</p><div class="post-content" id="post-content"></div></article>
+<section id="comments-section" hidden aria-labelledby="comments-heading"><h2 id="comments-heading">댓글 <span id="comment-count"></span></h2><p id="comment-status" class="status" role="status"></p><ul class="comment-list" id="comment-list"></ul><div id="comment-write-panel" hidden><h3>댓글 작성</h3><form id="comment-form" class="editor-form"><label>내용<textarea name="content" rows="4" required></textarea></label>{% include "_guest_fields.html" %}<button class="primary" type="submit">댓글 등록 ↗</button></form><p id="comment-write-status" role="status"></p></div></section>
+{% endblock %}

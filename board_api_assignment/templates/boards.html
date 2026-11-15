@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}게시판 목록{% endblock %}{% block page %}boards{% endblock %}
+{% block content %}
+<header class="programme-hero"><div class="programme-hero-copy"><p class="detail-kicker">KANT BOARD / COMMUNITY</p><h1>함께 나누는<br>이야기.</h1><p>궁금한 점부터 일상의 생각까지.<br>게시판을 골라 이야기를 둘러보세요.</p></div><figure class="programme-image"><img src="{{ url_for('board_static', path='images/audience.jpg') }}" alt="같은 무대를 바라보는 사람들" width="1536" height="1024"><figcaption>PEOPLE / STORIES / CONNECTION</figcaption></figure></header>
+<div class="catalog-toolbar"><p class="detail-kicker">01 / ALL BOARDS</p><span id="board-count" class="board-info"></span></div>
+<p id="page-status" class="status" role="status">게시판을 불러오는 중…</p>
+<ul id="board-list" class="programme-list" aria-label="게시판 목록"></ul>
+<div id="empty-state" class="empty-state" hidden><strong>아직 등록된 게시판이 없습니다.</strong><p>게시판이 준비되면 이곳에서 만날 수 있어요.</p></div>
+{% endblock %}

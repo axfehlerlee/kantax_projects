@@ -1,0 +1,16 @@
+# Local secrets (keep examples free of real values)
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+
+# Local development artifacts
+.venv/
+__pycache__/
+*.py[cod]
+*.bak
+*.log
+.DS_Store
+.vscode/
+.ipynb_checkpoints/
