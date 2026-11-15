@@ -73,8 +73,19 @@ Swagger에서는 `/v1/auth/login` 응답의 `access_token`을 **Authorize**에 �
 - `src/wiring`: 의존성 연결 / `src/shared`: DB·공통 예외 / `templates`, `static`: Jinja2 UI.
 - 디자인은 AsyncTicket의 색상·버튼·테이블·반응형 CSS를 재사용했습니다. 원본 프로젝트는 수정하지 않았습니다.
 
-## 검증과 남은 항목
+## 검증 결과 · 2026-11-15
 
-분리된 메모리 SQLite 환경에서 API 회귀 42개, 이후 권한 관련 API 19개 및 UI 이벤트·권한 표시 검사가 통과했습니다. 테스트 수는 별도 실행 결과로 중복을 포함합니다. 임시 테스트는 저장소에 포함돼 있지 않습니다. 전체 브라우저 E2E와 실제 PostgreSQL 쓰기 회귀는 미검증입니다.
+- **실제 PostgreSQL 17:** ORM 신규 스키마 10개 + 기존 DB 스키마 복제본 10개 회귀 통과. 회원·인증·게시판·글·댓글 저장, 권한 거부, 중복·동시 생성, 검색 6종·페이지네이션, bcrypt 경계, COMMIT 실패·rollback을 확인했습니다.
+- **Chrome + PostgreSQL:** 회원·비회원 글/댓글 CRUD, 관리자 게시판 CRUD, 회원가입·로그인·로그아웃, 비회원 공개 목록/계정 차단, 타인 수정 버튼 숨김을 확인했습니다. 비밀번호 변경은 사용자 직접 제출 후 성공을 확인했습니다. 모든 화면·기기·오류 조합의 전수 E2E를 뜻하지는 않습니다.
+- **기존 DB:** 5개 테이블을 READ ONLY로 비교했습니다. 차이는 남아 있지만 스키마 복제본의 API 회귀에서 저장 오류는 재현되지 않았습니다. [스키마 비교·최소 정리안](docs/schema-review.md) 참고. 원본 데이터·스키마는 변경하지 않았습니다.
+- **설치·실행:** 새 가상환경의 `uv sync --locked`, `uv run ... --reload --env-file ...` 서버 시작과 health·OpenAPI·UI·정적 리소스 HTTP 200을 확인했습니다.
+- **재실행:** `tests/test_postgresql.py`와 데이터 없는 기존 스키마 테스트 fixture를 포함했습니다. 운영 DB가 아닌 별도 PostgreSQL의 `TEST_DATABASE_URL`을 설정합니다. DB 이름에는 `test` 또는 `verification`이 필요하며 테스트는 자신이 만든 임의 스키마만 제거합니다.
 
-기존 DB에는 ORM과 다른 일부 VARCHAR 길이·인덱스·FK 삭제 정책과 미사용 `boards.is_active`, `posts.category`가 남아 있습니다. 현재 HTTP 입력 범위에서는 길이 충돌이 없지만 제출·배포 환경의 스키마 정합성은 별도 확인이 필요합니다. 마이그레이션·저장소 테스트·CI 및 로그인 시도 제한은 향후 개선 사항입니다.
+```bash
+uv run python -m unittest discover -s tests -p 'test_postgresql.py' -v
+TEST_SCHEMA_SQL=tests/fixtures/legacy_schema.sql uv run python -m unittest discover -s tests -p 'test_postgresql.py' -v
+```
+
+`TEST_DATABASE_URL`이 없으면 테스트를 건너뜁니다. 과거 SQLite·모의 UI 테스트 수는 별도 실행과 중복이 있어 위 PostgreSQL 결과에 합산하지 않습니다.
+
+**남은 사항:** 마이그레이션 도구·로그인 시도 제한은 미구현입니다(분리 테스트 계정의 연속 실패 로그인 6회 모두 401, 429·잠금 미발생). 기존 저장소 CI는 Python 3.9~3.11·루트 pytest 설정이며 실패 실행이 확인됐습니다(확인한 3.11 로그: 테스트 0개 수집, 종료 코드 5). 이 과제의 Python 3.13·uv·PostgreSQL 테스트용 CI 설정과는 구분해야 합니다. 다른 OS·전 기기 브라우저 검증은 아직 완료하지 않았습니다.
