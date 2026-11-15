@@ -19,6 +19,10 @@
 회원·비회원 게시글/댓글 CRUD와 관리자 게시판 관리 기능을 갖춘 과제입니다.
 Python 3.13+, FastAPI, PostgreSQL, SQLAlchemy Async, JWT, bcrypt, uv, Jinja2를 사용합니다.
 
+## 배포
+
+[게시판 열기](https://43.202.122.94/boards)
+
 ## 실행 방법
 
 ```bash
